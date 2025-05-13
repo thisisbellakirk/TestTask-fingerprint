@@ -148,7 +148,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="container mx-auto px-4 py-24">
+        {/* <section className="container mx-auto px-4 py-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center">
               How Spotter AI Works
@@ -224,8 +224,8 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="bg-gray-50 py-24">
+        </section> */}
+        {/* <section className="bg-gray-50 py-24">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-16 text-center">
               Trusted by Industry Leaders
@@ -271,7 +271,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="container mx-auto px-4 py-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-center">Use Cases</h2>
@@ -322,7 +322,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="bg-gray-50 py-24">
+        {/* <section className="bg-gray-50 py-24">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-4 text-center">
               Simple, Transparent Pricing
@@ -413,8 +413,8 @@ function App() {
               ))}
             </div>
           </div>
-        </section>
-        <section className="container mx-auto px-4 py-24">
+        </section> */}
+        {/* <section className="container mx-auto px-4 py-24">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center">
               Frequently Asked Questions
@@ -481,7 +481,7 @@ function App() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
         <footer className="bg-gray-900 text-white py-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-5 gap-8 mb-12">
