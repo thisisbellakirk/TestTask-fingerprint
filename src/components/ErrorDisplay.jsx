@@ -72,9 +72,9 @@ const ErrorDisplay = () => {
 
 const DemoSection = () => {
   return (
-    <section className="max-w-full w-[1248px]">
+    <section className="max-w-full w-[100%] ">
       <div className="max-w-4xl mx-auto border border-gray-200 rounded-xl shadow-sm overflow-hidden bg-white mb-12 md:mb-24">
-        <div className="flex items-center justify-end bg-gray-50 px-4 py-2 border-b border-gray-200">
+        <div className="flex items-center justify-end  px-4 py-2 ">
           <div className="flex items-center space-x-2">
             <span className="text-xs md:text-sm text-gray-500">
               I'M A DEVELOPER
@@ -82,8 +82,127 @@ const DemoSection = () => {
             <Switch />
           </div>
         </div>
-        <div className="p-3 md:p-6">
-          <CodeBlock />
+        <div className="p-2 ">
+          <div className="grid grid-cols-12">
+            <div className="col-span-4 bg-[#f0f0ed] rounded-tl-lg rounded-bl-lg p-4">
+              <p className="text-[#181916]">
+                Welcome to Fingerprint, Visitor{" "}
+                <span className="text-[#f35b22]">BqSLkhAzb0yizNNX6scw!</span>
+              </p>
+              <br />
+
+              <p className="text-[#181916]">
+                It’s great to have you here. You have visited more than 20 times
+                using Chrome.
+              </p>
+              <br />
+
+              <p className="text-[#181916]">
+                Your current IP suggests you’re in Ahmedabad, India What a
+                beautiful place{" "}
+              </p>
+              <br />
+
+              <p className="text-[#181916]">
+                Curious to explore more?{" "}
+                <span className="text-[#f35b22]">Sign up</span> for a free trial
+                and unlock all the features we offer - without any commitment.
+              </p>
+              <br />
+
+              <p className="text-[#181916]">Hope we see you soon!</p>
+            </div>
+            <div className="col-span-8 bg-[#fafaf8] rounded-tr-lg rounded-br-lg">
+              <p className="text-[#181916] font-bold pl-4 py-3">
+                Hello, visitor ID{" "}
+                <span className="text-[#ff5e24] font-bold">
+                  BqSLkhAzb0yizNNX6scw
+                </span>
+              </p>
+              <div className="grid grid-cols-12">
+                <div className="col-span-3 border border-[#e4e5e1] border-l-[#ff5e24] border-solid">
+                  <div className="p-2.5">
+                    <p className="text-sm text-[#484946]">Your visit summary</p>
+                    <p className="text-sm text-[#141415] font-bold">
+                      {" "}
+                      You visited 20+ times
+                    </p>
+                  </div>
+                </div>
+                <div className="col-span-3 border border-[#e4e5e1]">
+                  <div className="p-2.5">
+                    <p className="text-sm text-[#484946]">Incognito</p>
+                    <p className="text-sm  text-[#141415] font-bold">
+                      0 sessions
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-span-3 border border-[#e4e5e1]">
+                  <div className="p-2.5">
+                    <p className="text-sm text-[#484946]">IP address</p>
+                    <p className="text-sm text-[#141415] font-bold">1 IP</p>
+                  </div>
+                </div>
+                <div className="col-span-3 border border-[#e4e5e1]">
+                  <div className="p-2.5">
+                    <p className="text-sm text-[#484946]">Geolocation</p>
+                    <p className="text-sm text-[#141415] font-bold">
+                      1 location
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="py-3 px-3 text-[#484946] text-xs font-semibold">
+                Your visit history
+              </div>
+              <div className="grid grid-cols-12">
+                <div className="col-span-6 p-4 border border-[#e4e5e1]">
+                  <p className="text-[#181916] font-bold">Now</p>
+                  <p className="text-[#484946]"> Ahmedabad,India</p>
+                </div>
+                <div className="col-span-6  p-3 border border-[#e4e5e1]">
+                  <img src="https://api.mapbox.com/styles/v1/mapbox/light-v11/…ejA5YzMzaHBnN3R4OXF1czEifQ.4-Wne3WDiafdfFGLSTkFiQ" />
+                </div>
+
+                <div className="col-span-6 p-3  border border-[#e4e5e1]">
+                  <p className="text-[#181916] font-bold">
+                    IP Address{" "}
+                    <span className="font-medium text-[#484946]">
+                      182.77.117.228
+                    </span>
+                  </p>
+                </div>
+
+                <div className="col-span-6 p-3 border border-[#e4e5e1] bg-[#e8f7e9]">
+                  <p className="text-[#181916] font-bold">
+                    Incognito mode{" "}
+                    <span className="font-medium text-[#165424]">
+                      {" "}
+                      Not Detected
+                    </span>
+                  </p>
+                </div>
+
+                <div className="col-span-6 p-3 border border-[#e4e5e1]">
+                  <p className="text-[#181916] font-bold">
+                    Browser{" "}
+                    <span className="font-medium text-[#484946]">Chrome</span>
+                  </p>
+                </div>
+
+                <div className="col-span-6 p-3 border border-[#e4e5e1] bg-[#e8f7e9]">
+                  {" "}
+                  <p className="text-[#181916] font-bold">
+                    VPN{" "}
+                    <span className="font-medium text-[#165424]">
+                      Not Detected
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
