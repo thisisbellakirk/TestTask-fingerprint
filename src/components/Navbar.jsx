@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex flex-col justify-center items-center self-stretch px-5 py-3 w-full font-medium bg-stone-50 bg-opacity-80 shadow-sm sticky top-0 z-50 md:px-16">
+    <header className="flex flex-col justify-center items-center self-stretch px-5 py-3 w-full font-medium bg-stone-50 bg-opacity-80 shadow-sm sticky top-0 z-50 md:px-13">
       <div className="flex gap-5 justify-between items-center w-full max-w-7xl">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/53e1ee5ea4df04270735d29a0f99af5622f502f4?placeholderIfAbsent=true&apiKey=88286e34b1244d269cf16236e64f27e7"
@@ -17,7 +17,7 @@ const Navbar = () => {
         />
 
         <button
-          className="md:hidden flex items-center p-2 text-zinc-700"
+          className="xl:hidden flex items-center p-2 text-zinc-700"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -54,7 +54,8 @@ const Navbar = () => {
           )}
         </button>
 
-        <nav className="hidden md:flex gap-7 self-stretch mx-auto text-sm leading-loose text-zinc-700">
+        {/* Desktop Nav */}
+        <nav className="hidden xl:flex gap-7 self-stretch mx-auto text-sm leading-loose text-zinc-700">
           <button className="hover:text-orange-600 transition-colors">
             Product
           </button>
@@ -79,7 +80,7 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop CTA buttons */}
-        <div className="hidden md:flex gap-4 self-stretch text-xs leading-tight">
+        <div className="hidden xl:flex gap-4 self-stretch text-xs leading-tight">
           <a
             href="#login"
             className="grow my-auto text-orange-600 hover:text-orange-700"
@@ -103,9 +104,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile/Tablet Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden w-full pt-4 pb-2 border-t border-gray-200 mt-3">
+        <div className="xl:hidden w-full pt-4 pb-2 border-t border-gray-200 mt-3">
           <nav className="flex flex-col space-y-3 text-sm text-zinc-700">
             <button className="py-2 px-4 text-left hover:bg-gray-100 rounded">
               Product

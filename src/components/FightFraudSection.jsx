@@ -1,15 +1,15 @@
 import React from "react";
 const FightFraudSection = () => {
   return (
-    <section className="p-px max-w-full  w-[1248px] border-dashed border-[#e4e5e1] border-[1px] border-l">
+    <section className="p-px max-w-full ">
       <div className="grid grid-cols-12 ">
-        <div className="col-span-6 pt-24 pb-16  pl-10 border-dashed border-r-2 border-b-2 border-[#e4e5e1] ">
+        <div className="col-span-12 lg:col-span-6 pt-24 pb-16  pl-10 border-dashed border-r-1 border-b-1 border-[#e4e5e1] ">
           <div className="w-fit px-2.5 py-2 leading-none rounded border border-solid bg-white bg-opacity-70 border-zinc-100 text-zinc-500 text-sm">
             Customer Stories
             <span className="text-[rgba(193,193,190,1)]">_</span>
           </div>
 
-          <p className="text-4xl font-medium py-5 ">
+          <p className="text-2xl md:text-4xl font-medium py-5 ">
             Fight fraud with{" "}
             <span className="text-[#ff5e24] font-bold">Fingerprint</span>
           </p>
@@ -19,15 +19,15 @@ const FightFraudSection = () => {
               stop fraud in real time for real results.
             </span>
           </p>
-          <button className="bg-[##f8f8f6] border-1 border-[#d9d9d6] flex items-center justify-center  shadow-sm  p-2 rounded-lg">
+          <button className="bg-[##f8f8f6] border-1 text-xs border-[#d9d9d6] flex items-center justify-center  shadow-sm  p-2 rounded-lg">
             See all Case Studies
           </button>
         </div>
 
-        <div className="col-span-6 border-dashed border-r-2 border-b-2 border-[#e4e5e1]"></div>
+        <div className="col-span-6 border-b-1 border-dashed border-[#e4e5e1] hidden lg:block"></div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-3  border-r-2 border-dashed border-[#d9d9d6]">
+        <div className="col-span-12 md:col-span-3  border-r-1 border-dashed border-[#d9d9d6]">
           <div className="p-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const FightFraudSection = () => {
           </div>
         </div>
         <div className="col-span-12 md:col-span-6 bg-[#f7f7f5]">
-          <div className="p-8">
+          <div className="p-8 border-b-1 border-[#e4e5e1] border-dashed">
             <p className="text-lg font-medium">
               {" "}
               "We are very happy with the account takeover attacks that we could
@@ -68,14 +68,14 @@ const FightFraudSection = () => {
               identify these fraudsters."
             </p>
             <div className="mt-6 border-l border-[#f35b22] border-solid pl-4 text-sm">
-              <p className="pb-2">Prashanth Yerramilli</p>
+              <p className="pb-2 ">Prashanth Yerramilli</p>
               <p>Manager - Platform Abuse Team @ Dropbox</p>
               <p>Enterprise</p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-12 md:col-span-3 border-dashed border-l border-[#e4e5e1] border-[1px] relative min-h-[250px] md:min-h-[unset]">
+        <div className="hidden md:block col-span-12 md:col-span-3 border-dashed border-l-1 border-b-1 border-[#e4e5e1] relative min-h-[250px] md:min-h-[unset]">
           <div className="absolute w-full h-full">
             <svg
               viewBox="0 0 171 91"
@@ -559,7 +559,7 @@ const FightFraudSection = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-12 ">
+      <div className="grid grid-cols-12 border-dashed border-b-1 border-[#e4e5e1] ">
         <div className="col-span-3 border-dashed border-r border-t border-[#e4e5e1] ">
           <div className="p-2 md:p-8 flex items-center justify-center">
             <svg
@@ -618,7 +618,7 @@ const FightFraudSection = () => {
           </div>
         </div>
 
-        <div className="col-span-3 border-dashed border-[#e4e5e1] border-[1px]">
+        <div className="col-span-3 border-dashed border-[#e4e5e1] border-l-1 border-r-1">
           <div className="p-2 md:p-8 flex items-center justify-center">
             {" "}
             <svg

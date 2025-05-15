@@ -1,1 +1,104 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.custgrid {
+  grid-template-columns: max(20px, 50% - 1248px / 2) repeat(12, 1fr) max(
+      20px,
+      50% - 1248px / 2
+    );
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: 0.01rem;
+}
+.custgrid-col {
+  grid-column: 2/14;
+  display: flex;
+  gap: 16px;
+  padding: 0 96px;
+  justify-content: space-between;
+}
+.hero_section::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 786px;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: transform 0.8s ease;
+  will-change: transform;
+  background: linear-gradient(-8deg, transparent 50%, #fafaf8 50%);
+  transform: translateY(0);
+}
+.hero_section::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 786px;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: transform 0.8s ease;
+  will-change: transform;
+  background: linear-gradient(
+    -8deg,
+    transparent calc(50% - 0.5px),
+    #e4e5e1 calc(50% - 0.5px),
+    #e4e5e1 calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+  pointer-events: none;
+  transform: translateY(0);
+}
+
+.AccuracyChart::before {
+  background: linear-gradient(8deg, #fafaf8 50%, transparent 50%);
+  bottom: 0;
+  content: "";
+  height: 90rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -24.7%;
+  z-index: -10;
+}
+.AccuracyChart::after {
+  background: linear-gradient(
+    8deg,
+    transparent calc(50% - 0.5px),
+    #e4e5e1 calc(50% - 0.5px),
+    #e4e5e1 calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+  bottom: 0;
+  content: "";
+  height: 90rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: -24.7%;
+  z-index: -10;
+}
+@media (max-width: 991px) {
+  .custgrid-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+  .custgrid-col svg {
+    margin: auto;
+  }
+}
+.border0 {
+  border: 1px solid #f0f0ed;
+}
+.bg_cta {
+  background: linear-gradient(
+    301deg,
+    rgba(72, 73, 70, 0.02) 9.55%,
+    hsla(80, 1%, 43%, 0.02) 67.28%
+  );
+}

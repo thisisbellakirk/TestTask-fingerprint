@@ -87,23 +87,25 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="w-full bg-white border-t border-gray-200 border-dashed">
+    <footer className="w-full bg-white border-t border-gray-200 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 xl:grid-cols-6  gap-8">
           {/* Logo and newsletter - takes 1 column on mobile, 1 on desktop */}
-          <div className="md:col-span-1">
+          <div className="col-span-2 xl:col-span-1">
             <div className="flex flex-col items-start">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f925882174345faa24eddec1fb33675f10c0939?placeholderIfAbsent=true&apiKey=88286e34b1244d269cf16236e64f27e7"
                 alt="Fingerprint logo"
                 className="object-contain w-[137px]"
               />
-              <div className="flex gap-1.5 mt-8 md:mt-44">
-                <p className="text-sm text-neutral-500">Subscribe to our </p>
-                <p className="text-sm text-orange-600">newsletter_</p>
+              <div className="xl:flex gap-1.5 mt-8 md:mt-44 hidden">
+                <p className="text-xs text-neutral-500">
+                  Subscribe to our{" "}
+                  <span className="text-[#f35b22]">newsletter_</span>
+                </p>
               </div>
-              <div className="flex justify-between items-center w-full px-3.5 py-3.5 mt-5 bg-white rounded-lg border border-solid border-neutral-200 text-neutral-700">
+              <div className="hidden xl:flex justify-between items-center w-full px-3.5 py-3.5 mt-5 bg-white rounded-lg border border-solid border-[#e4e5e1] text-neutral-700">
                 <input
                   type="email"
                   placeholder="Email address*"
@@ -131,151 +133,145 @@ const Footer = () => {
           </div>
 
           {/* Navigation columns - each takes 1 column on desktop, full width on mobile */}
-          <div className="md:col-span-5">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              <FooterColumn
-                title="Product"
-                links={[
-                  "Device Intelligence Platform",
-                  "Smart Signals",
-                  "Integrations",
-                  "FingerprintJS vs. Pro",
-                  "Demo",
-                  "Identification",
-                  "Pricing",
-                ]}
-                isMobile={isMobile}
-                isOpen={openSections.product}
-                onToggle={() => toggleSection("product")}
-              />
+          <FooterColumn
+            title="Product"
+            links={[
+              "Device Intelligence Platform",
+              "Smart Signals",
+              "Integrations",
+              "FingerprintJS vs. Pro",
+              "Demo",
+              "Identification",
+              "Pricing",
+            ]}
+            isMobile={isMobile}
+            isOpen={openSections.product}
+            onToggle={() => toggleSection("product")}
+          />
 
-              <FooterColumn
-                title="Use Cases"
-                links={[
-                  "New Account Fraud",
-                  "Account Takeover",
-                  "Account Sharing Prevention",
-                  "SMS Fraud",
-                  "Payment Fraud",
-                  "Paywall Enforcement",
-                  "Personalization",
-                  "Bot Detection",
-                ]}
-                isMobile={isMobile}
-                isOpen={openSections.useCases}
-                onToggle={() => toggleSection("useCases")}
-              />
+          <FooterColumn
+            title="Use Cases"
+            links={[
+              "New Account Fraud",
+              "Account Takeover",
+              "Account Sharing Prevention",
+              "SMS Fraud",
+              "Payment Fraud",
+              "Paywall Enforcement",
+              "Personalization",
+              "Bot Detection",
+            ]}
+            isMobile={isMobile}
+            isOpen={openSections.useCases}
+            onToggle={() => toggleSection("useCases")}
+          />
 
-              <FooterColumn
-                title="Resources"
-                links={[
-                  "Resource Center",
-                  "Blog",
-                  "Case Studies",
-                  "Guides",
-                  "FAQ",
-                  "Support Center",
-                ]}
-                isMobile={isMobile}
-                isOpen={openSections.resources}
-                onToggle={() => toggleSection("resources")}
-              />
+          <FooterColumn
+            title="Resources"
+            links={[
+              "Resource Center",
+              "Blog",
+              "Case Studies",
+              "Guides",
+              "FAQ",
+              "Support Center",
+            ]}
+            isMobile={isMobile}
+            isOpen={openSections.resources}
+            onToggle={() => toggleSection("resources")}
+          />
 
-              <FooterColumn
-                title="Developers"
-                links={[
-                  "Documentation",
-                  "Tutorials",
-                  "SDKs and Libraries",
-                  "GitHub",
-                  "Discord Community",
-                ]}
-                isMobile={isMobile}
-                isOpen={openSections.developers}
-                onToggle={() => toggleSection("developers")}
-              />
+          <FooterColumn
+            title="Developers"
+            links={[
+              "Documentation",
+              "Tutorials",
+              "SDKs and Libraries",
+              "GitHub",
+              "Discord Community",
+            ]}
+            isMobile={isMobile}
+            isOpen={openSections.developers}
+            onToggle={() => toggleSection("developers")}
+          />
 
-              <div className="flex flex-col">
-                <div
-                  className={`flex items-center justify-between ${
-                    isMobile ? "cursor-pointer" : ""
+          <div className="flex flex-col">
+            <div
+              className={`flex items-center justify-between ${
+                isMobile ? "cursor-pointer" : ""
+              }`}
+              onClick={isMobile ? () => toggleSection("company") : undefined}
+            >
+              <h4 className="text-xs font-medium text-zinc-500 mb-4 md:mb-0">
+                Company
+              </h4>
+              {isMobile && (
+                <svg
+                  className={`w-4 h-4 text-neutral-500 transition-transform ${
+                    openSections.company ? "transform rotate-180" : ""
                   }`}
-                  onClick={
-                    isMobile ? () => toggleSection("company") : undefined
-                  }
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <h4 className="text-xs font-medium text-zinc-500 mb-4 md:mb-0">
-                    Company
-                  </h4>
-                  {isMobile && (
-                    <svg
-                      className={`w-4 h-4 text-neutral-500 transition-transform ${
-                        openSections.company ? "transform rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              )}
+            </div>
+            <div
+              className={`${
+                isMobile && !openSections.company ? "hidden" : "block"
+              }`}
+            >
+              <div className="flex flex-col items-start">
+                <div className="flex items-start gap-2 mt-6">
+                  <a
+                    href="#about-us"
+                    className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                  >
+                    About us
+                  </a>
                 </div>
-                <div
-                  className={`${
-                    isMobile && !openSections.company ? "hidden" : "block"
-                  }`}
-                >
-                  <div className="flex flex-col items-start">
-                    <div className="flex items-start gap-2 mt-6">
-                      <a
-                        href="#about-us"
-                        className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                      >
-                        About us
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2 mt-4">
-                      <a
-                        href="#careers"
-                        className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                      >
-                        Careers
-                      </a>
-                      <div className="px-2 py-1.5 text-xs font-medium leading-none text-orange-600 bg-white rounded-md border border-orange-200 border-solid shadow-[0px_1px_0px_rgba(0,0,0,0.03)]">
-                        We're hiring
-                      </div>
-                    </div>
-                    <a
-                      href="#press"
-                      className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                    >
-                      Press
-                    </a>
-                    <a
-                      href="#partners"
-                      className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                    >
-                      Partners
-                    </a>
-                    <a
-                      href="#system-status"
-                      className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                    >
-                      System status
-                    </a>
-                    <a
-                      href="#security"
-                      className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
-                    >
-                      Security
-                    </a>
+                <div className="flex items-center gap-2 mt-4">
+                  <a
+                    href="#careers"
+                    className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                  >
+                    Careers
+                  </a>
+                  <div className="px-2 py-1.5 text-xs font-medium leading-none text-orange-600 bg-white rounded-md border border-orange-200 border-solid shadow-[0px_1px_0px_rgba(0,0,0,0.03)]">
+                    We're hiring
                   </div>
                 </div>
+                <a
+                  href="#press"
+                  className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                >
+                  Press
+                </a>
+                <a
+                  href="#partners"
+                  className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                >
+                  Partners
+                </a>
+                <a
+                  href="#system-status"
+                  className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                >
+                  System status
+                </a>
+                <a
+                  href="#security"
+                  className="mt-4 text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
+                >
+                  Security
+                </a>
               </div>
             </div>
           </div>

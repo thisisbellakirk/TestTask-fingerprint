@@ -2,7 +2,7 @@ import React from "react";
 
 const StatItem = ({ number, description }) => {
   return (
-    <article className="flex flex-col items-start pt-5 pr-20 pb-32 w-full max-md:pb-24">
+    <article className="flex flex-col items-start pt-5 pr-20 pb-32 w-full max-md:pb-5">
       <div className="flex gap-8 items-start text-3xl font-medium leading-none text-orange-600 whitespace-nowrap">
         <div className="flex shrink-0 w-px bg-orange-600 h-[30px]" />
         <div>{number}</div>
@@ -16,15 +16,15 @@ const StatItem = ({ number, description }) => {
 
 const StatsSection = () => {
   return (
-    <section className="py-px max-w-full  border-dashed border-neutral-200 w-[1248px]">
-      <div className="flex gap-5 max-md:flex-col border-dashed border-1 border-neutral-200 ">
-        <div className="w-[33%] max-md:ml-0 max-md:w-full border-dashed border-r border-neutral-200 ">
+    <section className="py-px max-w-full  border-dashed border-[#e4e5e1] ">
+      <div className="flex gap-5 max-md:flex-col border-dashed border-t-1 border-b-1 border-[#e4e5e1] ">
+        <div className="w-[33%] max-md:ml-0 max-md:w-full border-dashed border-r border-[#e4e5e1] ">
           <StatItem
             number="250+"
             description="countries and territories where we identified devices_"
           />
         </div>
-        <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full border-dashed border-r border-neutral-200">
+        <div className="ml-5 w-[33%] max-md:ml-0 max-md:w-full border-dashed border-r border-[#e4e5e1]">
           <StatItem
             number="2 Billion +"
             description="unique browsers and mobile devices identified_"
